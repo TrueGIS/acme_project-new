@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-  <h1>Запрос отклонён</h1>
-  <p>Не удалось проверить CSRF-токен. Обновите страницу и отправьте форму ещё раз.</p>
-  <a href="{% url 'pages:homepage' %}">Вернуться на главную</a>
-{% endblock content %}

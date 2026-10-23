@@ -21,3 +21,4 @@ python acme_project/manage.py runserver
 ```
 
 Главная страница будет доступна по адресу `http://127.0.0.1:8000/`, а страница приложения `birthday` — по адресу `http://127.0.0.1:8000/birthday/`.
+
