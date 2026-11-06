@@ -12,8 +12,13 @@ def birthday(request, pk=None):
     else:
         instance = None
 
-    form_data = request.POST if request.method == "POST" else None
-    form = BirthdayForm(form_data, instance=instance)
+    if request.method == "POST":
+        form_data = request.POST
+        form_files = request.FILES
+    else:
+        form_data = None
+        form_files = None
+    form = BirthdayForm(form_data, form_files, instance=instance)
     context = {"form": form}
 
     if form.is_valid():
